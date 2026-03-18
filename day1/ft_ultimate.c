@@ -8,7 +8,7 @@ ft_ultimate_ft(int *********nbr)
 int main()
 {
 
-    int p = 0;
+    int p;
 
     int *p1 = &p;
     int **p2 = &p1;
