@@ -6,7 +6,7 @@
 /*   By: alngarti <alngarti@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/13 19:52:04 by alngarti          #+#    #+#             */
-/*   Updated: 2026/08/14 10:19:02 by alngarti         ###   ########.fr       */
+/*   Updated: 2026/08/15 16:32:56 by alngarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,30 @@
 
 void	ft_swap(int *a, int *b)
 {
-	int temp;
+	int	temp;
 
 	temp = *a;
 	*a = *b;
 	*b = temp;
 }
+
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
-
 	while (i < size)
 	{
-		j = i + 1;
-		while(j < size)
+		j = 0;
+		while (j < size - i - 1)
 		{
-			if(tab[i] > tab[j])
+			if (tab[j] > tab[j + 1])
 			{
-				ft_swap(&tab[i],&tab[j]);
+				ft_swap(&tab[j], &tab[j + 1]);
 			}
 			j++;
-		}	
+		}
 		i++;
 	}
 }
