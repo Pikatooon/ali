@@ -6,7 +6,7 @@
 /*   By: alngarti <alngarti@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 18:27:00 by alngarti          #+#    #+#             */
-/*   Updated: 2026/08/24 18:36:54 by alngarti         ###   ########.fr       */
+/*   Updated: 2026/08/25 14:27:05 by alngarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_is_prime(int nb)
 	int	i;
 
 	i = 2;
-	while (nb < i)
+	while (i < nb)
 	{
 		if (nb % i == 0)
 		{
