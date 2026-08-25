@@ -1,0 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alngarti <alngarti@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/17 09:38:38 by alngarti          #+#    #+#             */
+/*   Updated: 2026/08/18 19:29:02 by alngarti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+int	ft_str_is_printable(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!((str[i] >= 'a' && str[i] <= 'z')
+				|| (str[i] >= 'A' && str[i] <= 'Z')))
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
+}
+/*int main()
+{
+	char str[] = "HellO";
+	int result = ft_str_is_printable(str);
+
+	int i;
+	i = 0;
+	while (i < 1)
+	{
+	   if(result == 1)
+	   {
+			write(1, "1\n", 1);
+	   }
+	   else
+		   write(1, "0\n", 1);
+	   i++;
+	}
+}*/
