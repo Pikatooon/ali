@@ -1,47 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alngarti <alngarti@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/17 09:38:38 by alngarti          #+#    #+#             */
-/*   Updated: 2026/08/26 10:49:32 by alngarti         ###   ########.fr       */
+/*   Created: 2026/08/25 10:58:23 by alngarti          #+#    #+#             */
+/*   Updated: 2026/08/25 16:52:50 by alngarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_str_is_printable(char *str)
+int	main(int argc, char **argv)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (argv[0][i])
 	{
-		if (!(str[i] >= 32 || str[i] <= 126))
-		{
-			return (0);
-		}
+		write(1, &argv[0][i], 1);
 		i++;
 	}
-	return (1);
+	write(1, "\n", 1);
 }
-/*int main()
-{
-	char str[] = "HellO";
-	int result = ft_str_is_printable(str);
-
-	int i;
-	i = 0;
-	while (i < 1)
-	{
-	   if(result == 1)
-	   {
-			write(1, "1\n", 1);
-	   }
-	   else
-		   write(1, "0\n", 1);
-	   i++;
-	}
-}*/
